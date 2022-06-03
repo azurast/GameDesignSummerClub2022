@@ -17,7 +17,7 @@ public class BirdMovement_Finished : MonoBehaviour {
             Now that we have define that the bird needs this property we need to find a way to access it.
             Since we want the properties to be available from the beginning of the game, we put it in this Start() method.
             We use this by 'getting' that previously attached component like this. 
-        */
+        */ 
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
