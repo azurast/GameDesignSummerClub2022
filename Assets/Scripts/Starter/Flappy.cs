@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // All we need to know about MonoBehaviour is that it is a C# class that is recognized by Unity
-public class BirdMovement : MonoBehaviour {
+public class Flappy : MonoBehaviour {
     /* STEP 1 : Define the properties the bird needs*/
     public float flapPower = 1;
     private Rigidbody2D rigidbody2D;
