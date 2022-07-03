@@ -14,10 +14,12 @@ public class PipeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameManager.instance.isOnMainMenu==false){
         transform.Translate(new Vector3(-speed * Time.deltaTime,0,0));
         if(GameManager.instance.isGameOver==true){
 
             Destroy(this.gameObject);
+        }
         }
     }
 

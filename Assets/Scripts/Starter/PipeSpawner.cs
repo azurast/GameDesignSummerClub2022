@@ -8,9 +8,11 @@ public class PipeSpawner : MonoBehaviour
     public float spawnTime;
 
     // Start is called before the first frame update
-    void Start()
+    public void Startspawn()
     {
+
         InvokeRepeating("Spawn",0,spawnTime);
+
     }
 
     void Spawn(){
@@ -19,5 +21,11 @@ public class PipeSpawner : MonoBehaviour
 
         GameObject spawnedPipe = Instantiate(pipeObject, spawnedPosition ,transform.rotation);
         Destroy(spawnedPipe, 5);
+    }
+        public void stopSpawn()
+    {
+
+        CancelInvoke();
+
     }
 }

@@ -19,7 +19,7 @@ public class Flappy : MonoBehaviour {
         /* STEP 3 : Detecting user input
             Whenever the frame changes, we want the bird to 'fly up' whenever we click on them 
         */
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0)&&GameManager.instance.isOnMainMenu==false)
             Flap();
     }
 
@@ -34,6 +34,6 @@ public class Flappy : MonoBehaviour {
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
         this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-			GameManager.instance.MarkAsGameOver();
+		GameManager.instance.MarkAsGameOver();
     }
 }
