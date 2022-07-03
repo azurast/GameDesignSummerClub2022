@@ -29,4 +29,11 @@ public class Flappy : MonoBehaviour {
         Debug.Log("Flap");
         rigidbody2D.velocity = Vector2.up * flapPower;
     }
+
+    
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+        this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+			GameManager.instance.MarkAsGameOver();
+    }
 }
