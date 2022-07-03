@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 		public Flappy bird;
 		public TextMeshProUGUI  scoreText;
 		public TextMeshProUGUI  highScoreText;
+		public TextMeshProUGUI finalScore;
 		public GameObject gameOverPanel;
 		public GameObject mainMenuPanel;
         public TextMeshProUGUI  MainMenuhighScoreText;
@@ -79,7 +80,7 @@ public class GameManager : MonoBehaviour
 		{
 			isGameOver = true;
 			scoreText.gameObject.SetActive(false);
-
+			finalScore.text ="Score: "+ score.ToString();
 
 			SaveHighScore(score);
 			highScoreText.text = "Hi Score" + LoadHighScore().ToString();
